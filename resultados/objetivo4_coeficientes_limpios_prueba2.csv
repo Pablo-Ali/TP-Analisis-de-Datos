@@ -1,0 +1,69 @@
+﻿modelo;variable;coeficiente
+General básico limpio;Intercepto;1884914,8689302607
+General básico limpio;edad_modelo;9396,546767580916
+General básico limpio;AGLOMERADO=33;-224105,8703963144
+General básico limpio;CH04=2;-263546,7934275857
+General básico limpio;educacion_modelo=Primaria incompleta;-913525,4540313168
+General básico limpio;educacion_modelo=Primario completo o secundario incompleto;-970644,159618911
+General básico limpio;educacion_modelo=Secundario completo o superior incompleto;-819466,1824365186
+General básico limpio;educacion_modelo=Sin instrucción;-881599,0230271671
+General básico limpio;ESTADO=2;-680612,0658032176
+General básico limpio;ESTADO=3;-808039,6454435363
+General laboral limpio;Intercepto;1430025,7545787736
+General laboral limpio;edad_modelo;9795,187247027563
+General laboral limpio;horas_modelo;6764,941785813514
+General laboral limpio;horas_especiales;89985,30337371798
+General laboral limpio;AGLOMERADO=33;-189567,06997062036
+General laboral limpio;CH04=2;-172384,49577356313
+General laboral limpio;educacion_modelo=Primaria incompleta;-812592,4399952283
+General laboral limpio;educacion_modelo=Primario completo o secundario incompleto;-865698,3367860559
+General laboral limpio;educacion_modelo=Secundario completo o superior incompleto;-765936,554790907
+General laboral limpio;educacion_modelo=Sin instrucción;-804063,0660350893
+General laboral limpio;ESTADO=2;-376707,2507146698
+General laboral limpio;ESTADO=3;-533748,6787606026
+General laboral limpio;cat_ocup_modelo=1;932698,5155237551
+General laboral limpio;cat_ocup_modelo=2;-193554,85034640535
+General laboral limpio;cat_ocup_modelo=4;-1012298,3502946477
+General laboral limpio;rama_modelo=Actividades primarias;1617359,3556684414
+General laboral limpio;rama_modelo=Actividades profesionales y técnicas;640611,2767693454
+General laboral limpio;rama_modelo=Administración pública;321946,22669220966
+General laboral limpio;rama_modelo=Alojamiento y comidas;-10275,688288658479
+General laboral limpio;rama_modelo=Construcción;40113,57957158765
+General laboral limpio;rama_modelo=Enseñanza;-129561,76445324156
+General laboral limpio;rama_modelo=Finanzas, seguros e inmobiliarias;700367,3455603985
+General laboral limpio;rama_modelo=Industria manufacturera;175989,76041338986
+General laboral limpio;rama_modelo=Información y comunicación;503377,5645255114
+General laboral limpio;rama_modelo=Otras ramas;1952,5637371517648
+General laboral limpio;rama_modelo=Salud y servicios sociales;57046,38814005125
+General laboral limpio;rama_modelo=Servicio doméstico;-371652,13762955304
+General laboral limpio;rama_modelo=Servicios administrativos y de apoyo;-80395,9903841436
+General laboral limpio;rama_modelo=Sin clasificar;194746,5569556771
+General laboral limpio;rama_modelo=Transporte y almacenamiento;325479,12011081754
+Ocupados laboral limpio;Intercepto;1357541,3518995377
+Ocupados laboral limpio;edad_modelo;15767,9777547374
+Ocupados laboral limpio;horas_modelo;6880,412903766912
+Ocupados laboral limpio;horas_especiales;166390,13029502952
+Ocupados laboral limpio;AGLOMERADO=33;-342451,6642657601
+Ocupados laboral limpio;CH04=2;-202539,3319439057
+Ocupados laboral limpio;educacion_modelo=Primaria incompleta;-992059,2822974606
+Ocupados laboral limpio;educacion_modelo=Primario completo o secundario incompleto;-984011,6628880486
+Ocupados laboral limpio;educacion_modelo=Secundario completo o superior incompleto;-718000,703885025
+Ocupados laboral limpio;educacion_modelo=Sin instrucción;-120247,01002340473
+Ocupados laboral limpio;cat_ocup_modelo=1;813621,777865883
+Ocupados laboral limpio;cat_ocup_modelo=2;-216675,42749842242
+Ocupados laboral limpio;cat_ocup_modelo=4;-996170,108726837
+Ocupados laboral limpio;rama_modelo=Actividades primarias;1556605,7055558774
+Ocupados laboral limpio;rama_modelo=Actividades profesionales y técnicas;539807,8381789149
+Ocupados laboral limpio;rama_modelo=Administración pública;253010,97738246134
+Ocupados laboral limpio;rama_modelo=Alojamiento y comidas;-9260,723017245895
+Ocupados laboral limpio;rama_modelo=Construcción;71002,65318431532
+Ocupados laboral limpio;rama_modelo=Enseñanza;-204060,17329690477
+Ocupados laboral limpio;rama_modelo=Finanzas, seguros e inmobiliarias;605384,8143808997
+Ocupados laboral limpio;rama_modelo=Industria manufacturera;146717,1742060163
+Ocupados laboral limpio;rama_modelo=Información y comunicación;433433,1652460034
+Ocupados laboral limpio;rama_modelo=Otras ramas;-40143,436555826025
+Ocupados laboral limpio;rama_modelo=Salud y servicios sociales;-16184,000566319182
+Ocupados laboral limpio;rama_modelo=Servicio doméstico;-403920,09445864067
+Ocupados laboral limpio;rama_modelo=Servicios administrativos y de apoyo;-113577,14617072608
+Ocupados laboral limpio;rama_modelo=Sin clasificar;130070,8611648079
+Ocupados laboral limpio;rama_modelo=Transporte y almacenamiento;264490,1479575227
