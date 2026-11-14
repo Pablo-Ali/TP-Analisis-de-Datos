@@ -1,0 +1,15 @@
+﻿rama;min_n_ocupados;min_n_ingresos_validos;min_n_pares_horarios;poblacion_ponderada_2026_ambos_aglomerados;apta_ingreso_mensual;apta_ingreso_horario;orden_2026
+Comercio;76;47;47;1084979,0;True;True;1
+Industria manufacturera;55;39;38;672475,0;True;True;2
+Enseñanza;57;42;41;459686,0;True;True;3
+Construcción;19;14;14;450320,0;False;False;4
+Salud y servicios sociales;65;48;45;432920,0;True;True;5
+Transporte y almacenamiento;38;30;29;425093,0;True;False;6
+Administración pública;60;49;49;418123,0;True;True;7
+Servicio doméstico;30;24;24;398789,0;False;False;8
+Alojamiento y comidas;30;19;19;311014,0;False;False;9
+Actividades profesionales y técnicas;61;34;34;291811,0;True;True;10
+Servicios administrativos y de apoyo;18;12;12;285266,0;False;False;11
+Finanzas, seguros e inmobiliarias;34;22;22;181989,0;False;False;12
+Información y comunicación;31;24;24;168885,0;False;False;13
+Actividades primarias;4;3;3;33276,0;False;False;14
