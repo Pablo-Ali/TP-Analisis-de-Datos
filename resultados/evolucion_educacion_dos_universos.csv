@@ -1,0 +1,25 @@
+﻿aglomerado;universo;grupo_educacion;orden_grupo;mediana_2016;n_2016;mediana_2026;n_2026;variacion_real_pct;advertencia_muestra_pequena
+CABA;Ocupados de 25 a 64 años;TOTAL;0;1825098,5163227017;720;1700000,0;408;-6,854343215113468;False
+CABA;Ocupados de 25 a 64 años;Sin instrucción;1;;0;2120000,0;1;;True
+CABA;Ocupados de 25 a 64 años;Primaria incompleta;2;2737647,7744840523;8;78000,0;4;-97,15083873363876;True
+CABA;Ocupados de 25 a 64 años;Primario completo o secundario incompleto;3;1173277,6176360224;124;1066000,0;38;-9,1434129504806;False
+CABA;Ocupados de 25 a 64 años;Secundario completo o superior incompleto;4;1564370,15684803;313;1500000,0;163;-4,11476507438151;False
+CABA;Ocupados de 25 a 64 años;Superior completo;5;2346555,235272045;275;2000000,0;202;-14,76868006611689;False
+Partidos del GBA;Ocupados de 25 a 64 años;TOTAL;0;1238459,7075046904;2185;1000000,0;1330;-19,254539010005477;False
+Partidos del GBA;Ocupados de 25 a 64 años;Sin instrucción;1;1251496,125478424;12;980000,0;1;-21,693724810744897;True
+Partidos del GBA;Ocupados de 25 a 64 años;Primaria incompleta;2;912549,2581613509;104;800000,0;19;-12,333499496577382;True
+Partidos del GBA;Ocupados de 25 a 64 años;Primario completo o secundario incompleto;3;1042913,4378986866;898;850000,0;395;-18,497550313224277;False
+Partidos del GBA;Ocupados de 25 a 64 años;Secundario completo o superior incompleto;4;1303641,7973733584;792;1000000,0;641;-23,29181205950521;False
+Partidos del GBA;Ocupados de 25 a 64 años;Superior completo;5;1955462,6960600375;379;1422000,0;274;-27,280637832410935;False
+CABA;Personas de 25 años o más;TOTAL;0;1564370,15684803;1114;1500000,0;636;-4,11476507438151;False
+CABA;Personas de 25 años o más;Sin instrucción;1;1251496,125478424;2;2120000,0;1;69,39724836859267;True
+CABA;Personas de 25 años o más;Primaria incompleta;2;1042913,4378986866;40;500000,0;11;-52,057382537190755;True
+CABA;Personas de 25 años o más;Primario completo o secundario incompleto;3;1029877,0199249531;272;750000,0;91;-27,175770942568235;False
+CABA;Personas de 25 años o más;Secundario completo o superior incompleto;4;1303641,7973733584;448;1300000,0;244;-0,279355677356774;False
+CABA;Personas de 25 años o más;Superior completo;5;2216191,0555347092;352;1900000,0;289;-14,267319360623476;False
+Partidos del GBA;Personas de 25 años o más;TOTAL;0;977731,3480300187;3565;800000,0;2187;-18,177932863472222;False
+Partidos del GBA;Personas de 25 años o más;Sin instrucción;1;625748,062739212;49;395000,0;13;-36,87555367396782;True
+Partidos del GBA;Personas de 25 años o más;Primaria incompleta;2;638784,4807129456;359;440000,0;121;-31,119178175882222;False
+Partidos del GBA;Personas de 25 años o más;Primario completo o secundario incompleto;3;782185,078424015;1617;600000,0;801;-23,2918120595052;False
+Partidos del GBA;Personas de 25 años o más;Secundario completo o superior incompleto;4;1173277,6176360224;1055;950000,0;878;-19,030246062811052;False
+Partidos del GBA;Personas de 25 años o más;Superior completo;5;1851171,3522701687;485;1400000,0;374;-24,372209072751605;False

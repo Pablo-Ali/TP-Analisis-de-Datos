@@ -1,0 +1,25 @@
+﻿periodo;universo;grupo_educacion;orden_grupo;mediana_caba;n_caba;mediana_gba;n_gba;brecha_caba_gba_pct;advertencia_muestra_pequena
+2016-T2;Ocupados de 25 a 64 años;TOTAL;0;1825098,5163227017;720;1238459,7075046904;2185;47,36842105263159;False
+2016-T2;Ocupados de 25 a 64 años;Sin instrucción;1;;0;1251496,125478424;12;;True
+2016-T2;Ocupados de 25 a 64 años;Primaria incompleta;2;2737647,7744840523;8;912549,2581613509;104;199,99999999999994;True
+2016-T2;Ocupados de 25 a 64 años;Primario completo o secundario incompleto;3;1173277,6176360224;124;1042913,4378986866;898;12,5;False
+2016-T2;Ocupados de 25 a 64 años;Secundario completo o superior incompleto;4;1564370,15684803;313;1303641,7973733584;792;19,999999999999996;False
+2016-T2;Ocupados de 25 a 64 años;Superior completo;5;2346555,235272045;275;1955462,6960600375;379;19,999999999999996;False
+2026-T2;Ocupados de 25 a 64 años;TOTAL;0;1700000,0;408;1000000,0;1330;70,0;False
+2026-T2;Ocupados de 25 a 64 años;Sin instrucción;1;2120000,0;1;980000,0;1;116,32653061224491;True
+2026-T2;Ocupados de 25 a 64 años;Primaria incompleta;2;78000,0;4;800000,0;19;-90,25;True
+2026-T2;Ocupados de 25 a 64 años;Primario completo o secundario incompleto;3;1066000,0;38;850000,0;395;25,411764705882355;False
+2026-T2;Ocupados de 25 a 64 años;Secundario completo o superior incompleto;4;1500000,0;163;1000000,0;641;50,0;False
+2026-T2;Ocupados de 25 a 64 años;Superior completo;5;2000000,0;202;1422000,0;274;40,646976090014064;False
+2016-T2;Personas de 25 años o más;TOTAL;0;1564370,15684803;1114;977731,3480300187;3565;59,999999999999986;False
+2016-T2;Personas de 25 años o más;Sin instrucción;1;1251496,125478424;2;625748,062739212;49;100,0;True
+2016-T2;Personas de 25 años o más;Primaria incompleta;2;1042913,4378986866;40;638784,4807129456;359;63,26530612244898;False
+2016-T2;Personas de 25 años o más;Primario completo o secundario incompleto;3;1029877,0199249531;272;782185,078424015;1617;31,666666666666686;False
+2016-T2;Personas de 25 años o más;Secundario completo o superior incompleto;4;1303641,7973733584;448;1173277,6176360224;1055;11,111111111111116;False
+2016-T2;Personas de 25 años o más;Superior completo;5;2216191,0555347092;352;1851171,3522701687;485;19,71830985915495;False
+2026-T2;Personas de 25 años o más;TOTAL;0;1500000,0;636;800000,0;2187;87,5;False
+2026-T2;Personas de 25 años o más;Sin instrucción;1;2120000,0;1;395000,0;13;436,7088607594937;True
+2026-T2;Personas de 25 años o más;Primaria incompleta;2;500000,0;11;440000,0;121;13,636363636363647;True
+2026-T2;Personas de 25 años o más;Primario completo o secundario incompleto;3;750000,0;91;600000,0;801;25,0;False
+2026-T2;Personas de 25 años o más;Secundario completo o superior incompleto;4;1300000,0;244;950000,0;878;36,8421052631579;False
+2026-T2;Personas de 25 años o más;Superior completo;5;1900000,0;289;1400000,0;374;35,71428571428572;False
