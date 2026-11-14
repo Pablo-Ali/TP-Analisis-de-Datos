@@ -1,0 +1,2 @@
+﻿n;n_predictores;rango_completo;r2_ajuste_completo;r2_cv_promedio;r2_cv_min;r2_cv_max;r2_oof_conjunto;mae_oof;rmse_oof;pred_negativas_pct;r2_periodos_promedio;r2_periodos_mediana;r2_periodos_min;r2_periodos_max;periodos_r2_mayor_030;cantidad_periodos
+231760;70;True;0,4837115237264028;0,495976711983967;0,360981779371804;0,5681091737233084;0,48122070976290743;85835,27717249551;367522,2575159723;11,87823610631688;0,3511257815373002;0,37722248318969964;0,04200762194804175;0,4763831879785533;33;41
