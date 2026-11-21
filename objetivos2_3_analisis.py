@@ -327,16 +327,27 @@ def ingreso_real(grupo, periodo, codigo, factor):
         & entrevistados["PONDII"].gt(0)
     ]
 
+    # Medidas de posición ponderadas sobre P47T positivo.
+    q1_nominal = cuantil_ponderado(
+        positivos["P47T"], positivos["PONDII"], p=0.25
+    )
     mediana_nominal = cuantil_ponderado(
-        positivos["P47T"], positivos["PONDII"]
+        positivos["P47T"], positivos["PONDII"], p=0.50
+    )
+    q3_nominal = cuantil_ponderado(
+        positivos["P47T"], positivos["PONDII"], p=0.75
     )
 
     return {
         "periodo": periodo,
         "aglomerado": AGLOMERADOS[codigo],
         "n_ingresos_positivos": int(len(positivos)),
+        "q1_nominal": q1_nominal,
         "mediana_nominal": mediana_nominal,
+        "q3_nominal": q3_nominal,
+        "q1_real_2026_t2": q1_nominal * factor,
         "mediana_real_2026_t2": mediana_nominal * factor,
+        "q3_real_2026_t2": q3_nominal * factor,
     }
 
 
@@ -585,25 +596,49 @@ def grafico_tasas(tabla):
 def grafico_ingreso_real(tabla):
     fig, ax = plt.subplots(figsize=(11, 5))
 
+    periodos_orden = tabla["periodo"].drop_duplicates().tolist()
+    posiciones = {periodo: i for i, periodo in enumerate(periodos_orden)}
+
     for nombre, grupo in tabla.groupby("aglomerado", sort=False):
-        ax.plot(
-            grupo["periodo"],
+        grupo = grupo.copy()
+        x = np.array([posiciones[p] for p in grupo["periodo"]], dtype=float)
+
+        linea, = ax.plot(
+            x,
             grupo["mediana_real_2026_t2"],
             marker="o",
             markersize=3,
             linewidth=1.7,
-            label=nombre,
+            label=f"{nombre} - mediana",
         )
 
-    ax.set_xticks(tabla["periodo"].drop_duplicates()[::4])
-    ax.tick_params(axis="x", rotation=45)
+        # Banda Q1-Q3: contiene el 50 % central de los ingresos positivos.
+        ax.fill_between(
+            x,
+            grupo["q1_real_2026_t2"].to_numpy(dtype=float),
+            grupo["q3_real_2026_t2"].to_numpy(dtype=float),
+            alpha=0.15,
+            color=linea.get_color(),
+            label=f"{nombre} - Q1 a Q3",
+        )
+
+    marcas = list(range(0, len(periodos_orden), 4))
+    ax.set_xticks(
+        marcas,
+        [periodos_orden[i] for i in marcas],
+        rotation=45,
+        ha="right",
+    )
     ax.yaxis.set_major_formatter(
         FuncFormatter(lambda v, _: f"${v / 1_000_000:.1f} M")
     )
-    ax.set_title("Mediana ponderada de ingresos individuales positivos")
+    ax.set_title(
+        "Ingresos individuales positivos: mediana y rango intercuartílico"
+    )
+    ax.set_xlabel("Trimestre")
     ax.set_ylabel("Pesos constantes del segundo trimestre de 2026")
     ax.grid(axis="y", linestyle="--", alpha=0.3)
-    ax.legend()
+    ax.legend(fontsize=8)
     fig.tight_layout()
     fig.savefig(
         GRAFICOS / "ingresos_reales_mediana_ponderada.png",
@@ -613,56 +648,137 @@ def grafico_ingreso_real(tabla):
 
 
 def grafico_educacion(tabla):
+    """Gráfico comparativo de ingresos reales por nivel educativo.
+
+    Se muestran por separado 2016-T2 y 2026-T2 para evitar mezclar
+    los cuatro grupos en un único eje. Dentro de cada período se
+    comparan CABA y Partidos del GBA con colores diferentes.
+    """
+
     confiables = [
         "Primario completo o secundario incompleto",
         "Secundario completo o superior incompleto",
         "Superior completo",
     ]
+
+    etiquetas_cortas = [
+        "Primario completo /\nsecundario incompleto",
+        "Secundario completo /\nsuperior incompleto",
+        "Superior completo",
+    ]
+
     datos = tabla.loc[
         tabla["grupo_educacion"].isin(confiables)
     ].copy()
 
-    fig, ax = plt.subplots(figsize=(11, 6))
+    fig, ejes = plt.subplots(
+        1,
+        2,
+        figsize=(12, 5.5),
+        sharey=True,
+    )
 
-    etiquetas = []
-    valores = []
-    colores_pos = []
+    ancho = 0.36
+    x = np.arange(len(confiables))
 
-    for periodo in ("2016-T2", "2026-T2"):
-        for aglomerado in AGLOMERADOS.values():
-            parte = datos.loc[
-                (datos["periodo"] == periodo)
-                & (datos["aglomerado"] == aglomerado)
-            ]
-            for grupo in confiables:
-                fila = parte.loc[parte["grupo_educacion"] == grupo]
-                if fila.empty:
+    colores = {
+        "CABA": "tab:blue",
+        "Partidos del GBA": "tab:orange",
+    }
+
+    for ax, periodo in zip(ejes, ("2016-T2", "2026-T2")):
+        for desplazamiento, aglomerado in zip(
+            (-ancho / 2, ancho / 2),
+            AGLOMERADOS.values(),
+        ):
+            parte = (
+                datos.loc[
+                    (datos["periodo"] == periodo)
+                    & (datos["aglomerado"] == aglomerado)
+                ]
+                .set_index("grupo_educacion")
+                .reindex(confiables)
+            )
+
+            valores = (
+                parte["mediana_real_2026_t2"]
+                .to_numpy(dtype=float)
+            )
+
+            barras = ax.bar(
+                x + desplazamiento,
+                valores,
+                width=ancho,
+                label=aglomerado,
+                color=colores[aglomerado],
+            )
+
+            # Etiquetas de valor sobre las barras.
+            for barra, valor in zip(barras, valores):
+                if np.isnan(valor):
                     continue
-                anio = periodo[:4]
-                etiquetas.append(
-                    f"{anio}\n{aglomerado[:4]}\n"
-                    + {
-                        confiables[0]: "Prim/Sec",
-                        confiables[1]: "Sec/Sup",
-                        confiables[2]: "Sup.",
-                    }[grupo]
-                )
-                valores.append(float(fila["mediana_real_2026_t2"].iloc[0]))
-                colores_pos.append(len(valores))
 
-    ax.bar(range(len(valores)), valores)
-    ax.set_xticks(range(len(valores)), etiquetas, fontsize=8)
-    ax.yaxis.set_major_formatter(
-        FuncFormatter(lambda v, _: f"${v / 1_000_000:.1f} M")
+                ax.text(
+                    barra.get_x() + barra.get_width() / 2,
+                    barra.get_height(),
+                    f"${valor / 1_000_000:.2f} M",
+                    ha="center",
+                    va="bottom",
+                    fontsize=8,
+                )
+
+        ax.set_title(
+            "2016 T2" if periodo == "2016-T2" else "2026 T2"
+        )
+        ax.set_xticks(x)
+        ax.set_xticklabels(
+            etiquetas_cortas,
+            fontsize=8,
+        )
+        ax.grid(
+            axis="y",
+            linestyle="--",
+            alpha=0.3,
+        )
+        ax.set_axisbelow(True)
+
+    ejes[0].set_ylabel(
+        "Mediana de ingreso real, pesos del segundo trimestre de 2026"
     )
-    ax.set_title("Ingresos reales por nivel educativo - ocupados de 25 a 64 años")
-    ax.set_ylabel("Mediana, pesos de 2026 T2")
-    ax.grid(axis="y", linestyle="--", alpha=0.3)
-    fig.tight_layout()
+
+    ejes[0].yaxis.set_major_formatter(
+        FuncFormatter(
+            lambda v, _: f"${v / 1_000_000:.1f} M"
+        )
+    )
+
+    # Una sola leyenda para toda la figura.
+    handles, labels = ejes[0].get_legend_handles_labels()
+    fig.legend(
+        handles,
+        labels,
+        loc="upper center",
+        ncol=2,
+        frameon=False,
+        bbox_to_anchor=(0.5, 0.92),
+    )
+
+    fig.suptitle(
+        "Ingresos reales por nivel educativo - ocupados de 25 a 64 años",
+        fontsize=14,
+    )
+
+    fig.tight_layout(
+        rect=[0, 0, 1, 0.88]
+    )
+
     fig.savefig(
-        GRAFICOS / "ingresos_reales_educacion_ocupados_25_64_extremos.png",
+        GRAFICOS
+        / "ingresos_reales_educacion_ocupados_25_64_extremos.png",
         dpi=150,
+        bbox_inches="tight",
     )
+
     plt.close(fig)
 
 
