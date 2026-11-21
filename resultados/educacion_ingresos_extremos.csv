@@ -1,0 +1,21 @@
+﻿periodo;aglomerado;grupo_educacion;n_muestra;porcentaje_dentro_universo;n_ingreso_positivo_pondii_valido;mediana_real_2026_t2;advertencia_muestra_pequena
+2016-T2;CABA;Sin instrucción;1;0,06337224420268531;0;;True
+2016-T2;CABA;Primaria incompleta;12;0,8676703459937687;8;2737647,7744840523;True
+2016-T2;CABA;Primario completo o secundario incompleto;155;13,10287323838396;124;1173277,6176360224;False
+2016-T2;CABA;Secundario completo o superior incompleto;453;42,0799486793816;313;1564370,15684803;False
+2016-T2;CABA;Superior completo;411;43,88613549203799;275;2346555,235272045;False
+2016-T2;Partidos del GBA;Sin instrucción;13;0,5007733510587944;12;1251496,125478424;True
+2016-T2;Partidos del GBA;Primaria incompleta;142;4,94341799874858;104;912549,2581613509;False
+2016-T2;Partidos del GBA;Primario completo o secundario incompleto;1157;40,19863154446249;898;1042913,4378986866;False
+2016-T2;Partidos del GBA;Secundario completo o superior incompleto;1106;36,63901039797371;792;1303641,7973733584;False
+2016-T2;Partidos del GBA;Superior completo;540;17,71816670775642;379;1955462,6960600375;False
+2026-T2;CABA;Sin instrucción;1;0,16069968412348487;1;2120000,0;True
+2026-T2;CABA;Primaria incompleta;4;0,3576047386079649;4;78000,0;True
+2026-T2;CABA;Primario completo o secundario incompleto;64;10,29413795166583;38;1066000,0;False
+2026-T2;CABA;Secundario completo o superior incompleto;236;35,64572124626248;163;1500000,0;False
+2026-T2;CABA;Superior completo;325;53,54183637934023;202;2000000,0;False
+2026-T2;Partidos del GBA;Sin instrucción;3;0,15611356874169774;1;980000,0;True
+2026-T2;Partidos del GBA;Primaria incompleta;48;2,4109149144841115;19;800000,0;True
+2026-T2;Partidos del GBA;Primario completo o secundario incompleto;593;29,258496757720845;395;850000,0;False
+2026-T2;Partidos del GBA;Secundario completo o superior incompleto;1006;48,30263479149683;641;1000000,0;False
+2026-T2;Partidos del GBA;Superior completo;436;19,871839967556518;274;1422000,0;False
